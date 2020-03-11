@@ -1,1 +1,314 @@
 /* You can add global styles to this file, and also import other style files */
+$color_pink-dark: #b15dcb;
+$color_pink: #cb9ade;
+$color_purple: #6362d6;
+$color-green: #30ca8e;
+$color-mint: #2dc4c8;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Work Sans', sans-serif; }
+
+// Generic - Reset
+.mat-grid-tile.items-left .mat-figure {
+    justify-content: flex-start !important;
+    align-items: center !important;
+ }
+.mat-grid-tile.items-right .mat-figure {
+    justify-content: flex-end !important;
+    align-items: center !important;
+}
+
+mat-icon.u_md-12{
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+}
+
+.container{
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+// Utilities
+.u_progress-green .mat-progress-bar-fill::after {
+    background-color: $color-green !important;
+}
+
+.u_progress-green .mat-progress-bar-buffer {
+    background: #E4E8EB !important;
+}
+
+.u_progress-green, 
+.u_progress-green .mat-progress-bar {
+    border-radius: 50px !important;
+    height: 5px !important;
+}
+
+.u_spinner-green::ng-deep circle {
+    stroke: #212121 !important;
+}
+.u_spinner-green circle {
+    stroke: $color-green !important;
+}
+
+.u_percent-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end !important;
+    align-items: center !important;
+}
+
+.u_percent-item{
+    width: 100%;
+    height: 8px;
+    border-radius: 20px;
+
+    &.purple{
+        background: $color_purple;
+    }
+    &.mint{
+        background: $color-green;
+    }
+}
+
+.u_percent-bars{
+    display: flex;
+    flex: 1; 
+    align-items: center;
+}
+
+.o_spinner-wrapper{
+    position: relative;
+}
+
+.u_spinner-text{
+    top: 5px;
+    position: absolute; 
+    padding: 11px;
+    font-size: 13px;
+    color: #989898;
+}
+
+.u-toggle_switch.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: $color_purple !important;
+}
+
+.u-toggle_switch.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: #fff !important;
+}
+
+.u-toggle_switch.mat-slide-toggle .mat-slide-toggle-bar {
+    background-color: $color_green !important;
+}
+
+.u-toggle_switch.mat-slide-toggle .mat-slide-toggle-thumb {
+    background-color: #fff !important;
+}
+
+
+
+.u_progress-purple .mat-progress-bar-fill::after {
+    background-color: $color_purple !important;
+}
+
+.u_progress-purple .mat-progress-bar-buffer {
+    background: #E4E8EB !important;
+}
+
+.u_progress-purple, 
+.u_progress-purple .mat-progress-bar {
+    border-radius: 50px !important;
+    height: 5px !important;
+}
+
+.u-margin__bottom-100{
+    margin-bottom: 100px;
+}
+
+.u_text-justify{
+    text-align: justify;
+}
+
+.u_text-center{
+    text-align: center;
+}
+
+.u_text-grey{
+    color: #989898;
+}
+
+.u_display-flex{
+    display: flex;
+}
+
+.u_display-flex__start-center{
+    justify-content: flex-start !important;
+    align-items: center !important;
+}
+
+.u_display-flex__end-center{
+    justify-content: flex-end !important;
+    align-items: center !important;
+}
+
+hr.u_line-grey{
+    display: block; 
+    height: 2px;
+    border: 0; border-top: 1px solid #f1f1f1;
+}
+
+.u_text-purple{
+    color: $color_purple;
+}
+
+.u_text-green{
+    color: $color-green;
+}
+
+.u_text-mint{
+    color: $color-green;
+}
+
+.u_margin-5px{
+    margin: 5px;
+}
+
+.u_margin__h-5px{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.u_padding-5px{
+    padding: 5px;
+}
+.u_padding__left-15px{
+    padding-left: 15px;
+}
+
+.u_margin__left-15px{
+    padding-left: 15px;
+}
+
+
+.u_text-uppercase{
+    text-transform: uppercase;
+}
+
+.u_text-capitalize{
+    text-transform: capitalize;
+}
+
+.u-separate__vertical-grey{
+    display: block;
+    width: 1px;
+    background: #f1f1f1;
+    margin: 0 5px;
+}
+
+.u-separate__vertical-grey.large{
+    height: 50px;
+}
+.u-separate__vertical-grey.small{
+    height: 25px;
+}
+.u-separate__vertical-grey.inline{
+    display: inline-flex !important;
+}
+.u-separate__vertical-grey.full{
+    height: 100%;
+}
+
+
+// Objects
+.o_textbox{
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    header > h1 {
+        font-size: 33px;
+    }
+
+}
+
+.o_item-list {
+    border: 2px solid #f1f1f1;
+
+    &.u_border_strip__purple::before{
+        content:"";
+        display: block;
+        height: 100%;
+        position: absolute;
+        left: 0;
+    }
+
+    &.last_item{
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    &.root{
+        margin: 20px 0 0 15px;
+        border-radius: 8px;
+        border-bottom-right-radius: 0;
+        &.u_border_strip__purple{
+            display: block;
+            position: relative;
+        }
+        &.u_border_strip__purple::before{
+            background: repeating-linear-gradient(
+                0,
+                $color_pink,
+                $color_pink 5px,
+                $color_pink-dark 5px,
+                $color_pink-dark 10px
+            );
+            width: 5px;
+            border-bottom-left-radius: 12px;
+            border-top-left-radius: 12px;
+        }
+    }
+    &.child{
+        margin: auto 0 auto auto;
+        width: 90%;
+        border-top: none !important;
+        border-radius: none;
+        &.u_border_strip__purple::before{
+            background: $color_pink;
+            width: 2px;
+            border-bottom-left-radius: 12px;
+            border-top-left-radius: 12px;
+        }
+    }
+
+}
+
+// Components
+.c_tabs{
+    margin: 0 auto;
+    background: #f3f2f1;
+    padding: 5px;
+    border-radius: 10px;
+    max-width: 150px;
+    
+    a{
+        padding: 8px 10px;
+        text-transform: uppercase;
+        display: inline-block;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #15161a;
+        font-size: 14px;
+        font-weight: 600;
+
+        &.active{
+            background: #fff;
+            border: #f3f2f1;
+            -webkit-box-shadow: 0px 5px 14px -11px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 5px 14px -11px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 5px 14px -11px rgba(0, 0, 0, 0.75);
+        }
+    }
+}

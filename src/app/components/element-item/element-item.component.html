@@ -1,0 +1,40 @@
+<mat-grid-list  cols="6" 
+                rowHeight="70px" 
+                class="o_item-list u_border_strip__purple" 
+                [ngClass]="{'root' : item.type === 'root', 'child': item.type === 'child', 'last_item': item.last_item}">
+    <mat-grid-tile colspan="3" rowspan="1" class="items-left u_padding__left-15px">
+        <img src="{{item.icon}}" class="u_margin__h-5px u_margin__left-15px">
+        <mat-icon aria-hidden="false" class="u_md-12 u_margin__h-5px u_text-grey">info_outline</mat-icon>
+        {{item.name}}
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="1" class="u_text-grey items-right">
+        <div class="u_percent-wrapper">
+            <div class="u-separate__vertical-grey large"></div>
+            <span class="u_padding-5px">
+                {{item.percent.mint}}%
+            </span>
+            <div class="u_percent-bars">
+                <div class="u_percent-item mint" [ngStyle]="{'flex-basis': item.percent.mint+'%'}"></div>
+                <div class="u-separate__vertical-grey small inline"></div>
+                <div class="u_percent-item purple" [ngStyle]="{'flex-basis': item.percent.purple+'%'}"></div>
+            </div>
+            <span class="u_padding-5px">
+                {{item.percent.purple}}%
+            </span>
+            <div class="u-separate__vertical-grey large"></div>
+
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1" class="items-right">
+        <div class="o_spinner-wrapper">
+            <mat-progress-spinner class="u_spinner-green" mode="determinate" value="{{item.spinner}}" diameter="50"></mat-progress-spinner>
+            <div class="u_spinner-text"> {{item.spinner+'%' || '0%'}} </div>
+        </div>
+        <div class="u-separate__vertical-grey full"></div>
+        <div>
+            <mat-icon aria-hidden="false" class="u_text-grey">
+                keyboard_arrow_down
+            </mat-icon>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
